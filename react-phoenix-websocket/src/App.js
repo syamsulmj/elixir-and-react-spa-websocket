@@ -14,8 +14,8 @@ import {
   Typography
 } from '@material-ui/core';
 
-let socket = new Socket("ws://localhost:4000/socket", {params: {token: window.userToken}})
-let channel = socket.channel("room:lobby", {})
+let socket = new Socket("ws://localhost:4000/socket", {})
+let channel = socket.channel("room:lobby", {token: "02534664265884586f2a013578c11cff74b957e91d5d6435c3e56e27384f1df0"})
 
 const App = () => {
   let chatHistory = JSON.parse(localStorage.getItem('chatHistory'));
